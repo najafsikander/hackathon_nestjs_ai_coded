@@ -9,6 +9,7 @@ import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
 import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
+import { PrismaModule } from './lib/database/prisma.module.js';
 
 import 'dotenv/config';
 
@@ -18,6 +19,7 @@ import 'dotenv/config';
       isGlobal: true,
       envFilePath: '.env',
     }),
+    PrismaModule,
     ArcjetModule.forRoot({
       isGlobal: true,
       key: process.env.ARCJET_KEY!,
