@@ -9,6 +9,7 @@ import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
 import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
+import { BetterAuthModule } from './lib/auth/auth.module.js';
 import { PrismaModule } from './lib/database/prisma.module.js';
 
 import 'dotenv/config';
@@ -20,6 +21,7 @@ import 'dotenv/config';
       envFilePath: '.env',
     }),
     PrismaModule,
+    BetterAuthModule,
     ArcjetModule.forRoot({
       isGlobal: true,
       key: process.env.ARCJET_KEY!,

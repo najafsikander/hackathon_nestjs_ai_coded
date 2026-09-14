@@ -7,7 +7,7 @@
   "type": "module",
   "license": "UNLICENSED",
   "engines": {
-    "node": ">=22.21.0 <23 || >=24.5.0"
+    "node": ">=22.22.1 <23 || >=24.5.0"
   },
   "scripts": {
     "build": "nest build",
@@ -35,6 +35,8 @@
     "@nestjs/platform-express": "^11.0.1",
     "@prisma/adapter-pg": "^7.9.1",
     "@prisma/client": "^7.9.1",
+    "@thallesp/nestjs-better-auth": "^2.8.0",
+    "better-auth": "^1.7.4",
     "dotenv": "^17.4.2",
     "pg": "^8.22.0",
     "reflect-metadata": "^0.2.2",
