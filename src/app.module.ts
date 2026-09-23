@@ -11,6 +11,7 @@ import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { BetterAuthModule } from './lib/auth/auth.module.js';
 import { PrismaModule } from './lib/database/prisma.module.js';
+import { UserModule } from './module/user/user.module.js';
 
 import 'dotenv/config';
 
@@ -34,6 +35,7 @@ import 'dotenv/config';
         }),
       ],
     }),
+    UserModule,
   ],
   controllers: [AppController],
   providers: [
